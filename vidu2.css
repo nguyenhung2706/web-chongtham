@@ -1,5 +1,108 @@
-* {
+/* Màu nền tổng thể cho body */
+body {
+    background-color: #f0f8ff; /* Xanh dương nhạt, giống như nước biển nhẹ nhàng */
+    font-family: Arial, sans-serif; /* Thêm font chữ để đẹp hơn */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+/* Màu nền cho header */
+.top-header {
+    background-color: #007bff; /* Xanh dương đậm cho header trên cùng */
+    color: white;
+}
+
+.header {
+    background-color: #ffffff; /* Trắng cho header chính */
+    border-bottom: 2px solid #007bff; /* Đường viền xanh để nổi bật */
+    padding: 10px 0;
+}
+.logo {
+    font-size: 24px; /* Tăng kích thước để nổi bật */
+    font-weight: bold;
+    color: #007bff; /* Màu xanh để chuyên nghiệp */
+    text-align: center; /* Căn giữa nếu cần */
+    margin-bottom: 10px;
+}
+.nav-list {
+    list-style: none; /* Xóa dấu chấm */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Hiển thị ngang */
+    justify-content: center; /* Căn giữa các item */
+    gap: 20px;
+}
+.nav-list a{
+    display: inline;
+}
+
+/* Màu nền cho các section */
+.box {
+    background-color: #ffffff; /* Trắng cho các section chính */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px; /* Bo góc nhẹ để mềm mại */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Bóng nhẹ để nổi bật */
+}
+.nav-list a {
+    text-decoration: none; /* Xóa gạch dưới */
+    color: #007bff; /* Màu xanh */
+    font-weight: 500;
+    padding: 5px 10px; /* Padding cho dễ click */
+    transition: color 0.3s; /* Hiệu ứng mượt */
+}
+
+.nav-list a:hover {
+    color: #0056b3; /* Màu đậm khi hover */
+}
+
+/* Responsive: Menu dọc trên mobile */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column; /* Ngang thành dọc */
+        gap: 10px;
+    }
+    .logo {
+        font-size: 20px; /* Thu nhỏ logo */
+    }
+}
+
+/* Màu nền đặc biệt cho section home (để thu hút) */
+#home {
+    background-color: #e3f2fd; /* Xanh dương rất nhạt */
+}
+
+/* Màu nền cho footer */
+.footer {
+    background-color: #343a40; /* Xám đậm */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 60px /*khoảng cách giữa các mục*/;
+}
+
+/* Thêm màu cho nav links */
+nav ul li a {
+    color: #007bff; /* Xanh dương cho link menu */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #0056b3; /* Xanh đậm hơn khi hover */
+}
+
+.hero-banner img { width: 100%; height: 100%; object-fit: contain; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 1005); }
+.hero-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px; }
+.cta-button { background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+.stats { display: flex; justify-content: space-around; margin-top: 20px; }
+.stat-item { text-align: center; font-size: 18px; }
+.hero-banner { position: relative; width: 100%; height: 450px; overflow: hidden;}
+@media (max-width:768ox) {
+    img {max-width: 100%; height: auto;} /*hình ahr responsive */
+    .nav-list { flex-direction: column;}
+    .hero-banner img { height: 200px;} /* thu nhỏ banner */
 }
